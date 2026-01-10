@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <title>Marmoset Viewer</title>
 
+  <!-- Marmoset Viewer -->
   <script src="https://viewer.marmoset.co/main/marmoset.js"></script>
 
   <style>
     html, body {
+      margin: 0;
       width: 100%;
       height: 100%;
-      margin: 0;
       background: #111;
       overflow: hidden;
     }
@@ -20,15 +21,19 @@
 <body>
 
 <script>
-  marmoset.embed(
-    "rifle2_web_test.mview",
-    {
-      width: "100%",
-      height: "100%",
-      autoStart: true,
-      ui: true
-    }
-  );
+  window.addEventListener("load", function () {
+    marmoset.embed(
+      "rifle2_web_test.mview",
+      {
+        width: "100%",
+        height: "100%",
+        autoStart: true,
+        ui: true,
+        fullscreen: true,
+        backgroundColor: "#111111"
+      }
+    );
+  });
 </script>
 
 </body>
